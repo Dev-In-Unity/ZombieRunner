@@ -255,8 +255,10 @@ GameObject:
   - component: {fileID: 2337074158996965286}
   - component: {fileID: 2337074159000356742}
   - component: {fileID: 2337074158999389510}
+  - component: {fileID: 1748795945}
+  - component: {fileID: 1928792790638823105}
   m_Layer: 0
-  m_Name: Carbine
+  m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -271,7 +273,7 @@ Transform:
   m_GameObject: {fileID: 2337074158997199750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 2, z: 2}
   m_Children:
   - {fileID: 2337074158996965284}
   - {fileID: 2337074158996965280}
@@ -309,7 +311,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 25f311c6bbd46e0448befa180cda78ed, type: 2}
+  - {fileID: 2100000, guid: d4106017bf762ed4489e0801f5258129, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -331,6 +333,43 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1748795945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337074158997199750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 177aea57068cfba49a25bfa05c1d3284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FPCamera: {fileID: 0}
+  range: 80
+  damage: 20
+  muzzleFlash: {fileID: 2473979129609895466}
+  hitEffect: {fileID: 9049285813182715993, guid: c357d3db0b87b1f418486afa6b4b4fbf, type: 3}
+  ammoSlot: {fileID: 0}
+  timeBetweenShots: 0.2
+--- !u!114 &1928792790638823105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337074158997199750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d652b68d45fc84946a3cd9490a7fcfb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsCamera: {fileID: 0}
+  fpsController: {fileID: 0}
+  zoomedOutFOV: 60
+  zoomedInFOV: 40
+  zoomedOutSentivity: 2
+  zoomedInSentivity: 0.5
 --- !u!1 &2337074158997199752
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,5 +708,10 @@ PrefabInstance:
 --- !u!4 &4467843906112543077 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3350055855090824723, guid: 4a60d8477aafac045a1f56d3a60c7813, type: 3}
+  m_PrefabInstance: {fileID: 1188161201844825974}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2473979129609895466 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3614249443508621660, guid: 4a60d8477aafac045a1f56d3a60c7813, type: 3}
   m_PrefabInstance: {fileID: 1188161201844825974}
   m_PrefabAsset: {fileID: 0}
