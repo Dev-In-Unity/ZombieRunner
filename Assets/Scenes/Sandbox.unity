@@ -3213,6 +3213,10 @@ PrefabInstance:
       propertyPath: fpsCamera
       value: 
       objectReference: {fileID: 1499926946}
+    - target: {fileID: 3365432951179321518, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: currentWeapon
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4204838100855224954, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: fpsCamera
       value: 
@@ -3241,10 +3245,6 @@ PrefabInstance:
       propertyPath: fpsController
       value: 
       objectReference: {fileID: 52694907}
-    - target: {fileID: 7096132266764493216, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
-      propertyPath: damage
-      value: 80
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
 --- !u!114 &1996015149 stripped
