@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002cfbd3041f3e040aa2b6a9304d655d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoAmount: 10
+  ammoAmount: 100
 --- !u!1 &3657904274779073645
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,6 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cdbe64e06985e04480ad0dde364f18e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentWeapon: 0
 --- !u!1001 &2350570229833956539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -404,6 +405,14 @@ PrefabInstance:
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 8949872203367934100}
+    - target: {fileID: 1928792790638823105, guid: e69db3dcc06cc2348bfbec4cd41893fc, type: 3}
+      propertyPath: fpsCamera
+      value: 
+      objectReference: {fileID: 2000000}
+    - target: {fileID: 1928792790638823105, guid: e69db3dcc06cc2348bfbec4cd41893fc, type: 3}
+      propertyPath: fpsController
+      value: 
+      objectReference: {fileID: 11400004}
     - target: {fileID: 2337074158996965286, guid: e69db3dcc06cc2348bfbec4cd41893fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -524,7 +533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158997199750, guid: 4cfd7e666b269f545ba259f68303aa65, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cfd7e666b269f545ba259f68303aa65, type: 3}
@@ -594,12 +603,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158997199750, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: m_Name
-      value: Carbine
+      value: Sniper
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158997199750, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3967812997392168643, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
+      propertyPath: fpsCamera
+      value: 
+      objectReference: {fileID: 2000000}
+    - target: {fileID: 3967812997392168643, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
+      propertyPath: fpsController
+      value: 
+      objectReference: {fileID: 11400004}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
 --- !u!4 &4761556203963786287 stripped
