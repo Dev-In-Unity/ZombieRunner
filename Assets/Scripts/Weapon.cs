@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Weapon : MonoBehaviour
 {
     [SerializeField] Camera FPCamera;
@@ -11,55 +10,58 @@ public class Weapon : MonoBehaviour
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject hitEffect;
     [SerializeField] Ammo ammoSlot;
+    [SerializeField] AmmoType ammoType;
     [SerializeField] float timeBetweenShots = 0.5f;
 
-    bool canShoot = true;    
-
-    void Update()
+    bool canShoot = true;
+    private void OnEnable()
     {
-        if (Input.GetMouseButtonDown(0) && canShoot == true)
-        {
-            StartCoroutine(Shoot());
-        }
-    }
-
-    IEnumerator Shoot()
-    {
-        canShoot = false;
-        if(ammoSlot.GetCurrentAmmo() > 0)
-        {
-            PlayMuzzleFlash();
-            ProcessRaycast();
-            ammoSlot.ReduceCurrentAmmo();
-        }
-        yield return new WaitForSeconds(timeBetweenShots);
         canShoot = true;
     }
 
-    private void PlayMuzzleFlash()
+    void Update()
+{
+    if (Input.GetMouseButtonDown(0) && canShoot == true)
     {
-        muzzleFlash.Play();
+        StartCoroutine(Shoot());
     }
+}
 
-    private void ProcessRaycast()
+IEnumerator Shoot()
+{
+    canShoot = false;
+    if (ammoSlot.GetCurrentAmmo(ammoType) > 0)
     {
-        RaycastHit hit;
-        if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, range))
-        {
-            CreateHitImapact(hit);
-            EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
-            if (target == null) { return; }
-            target.TakeDamage(damage);
-        }
-        else
-        {
-            return;
-        }
+        PlayMuzzleFlash();
+        ProcessRaycast();
+        ammoSlot.ReduceCurrentAmmo(ammoType);
     }
+    yield return new WaitForSeconds(timeBetweenShots);
+    canShoot = true;
+}
 
-    private void CreateHitImapact(RaycastHit hit)
+private void PlayMuzzleFlash()
+{
+    muzzleFlash.Play();
+}
+private void ProcessRaycast()
+{
+    RaycastHit hit;
+    if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, range))
     {
-        GameObject impact = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
-        Destroy(impact, 0.1f);
+        CreateHitImpact(hit);
+        EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
+        if (target == null) return;
+        target.TakeDamage(damage);
     }
+    else
+    {
+        return;
+    }
+}
+private void CreateHitImpact(RaycastHit hit)
+{
+    GameObject impact = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
+    Destroy(impact, .1f);
+}
 }
