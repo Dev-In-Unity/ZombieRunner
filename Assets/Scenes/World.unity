@@ -14177,6 +14177,10 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 380645439609034741}
+    - target: {fileID: 8984073468491721110, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: impactCanvas
+      value: 
+      objectReference: {fileID: 380645439609034742}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
 --- !u!1001 &2030420321
@@ -14450,6 +14454,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!223 &380645439609034742 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 6418049546349674188, guid: 762c1404a5d300743a7a44be568c7cf3, type: 3}
+  m_PrefabInstance: {fileID: 380645439609034740}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3632386964657380671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14503,15 +14512,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3632386963952414629, guid: faf8921f309700b4f909541a1fc7690f, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.21698111
       objectReference: {fileID: 0}
     - target: {fileID: 3632386963952414629, guid: faf8921f309700b4f909541a1fc7690f, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.20367567
       objectReference: {fileID: 0}
     - target: {fileID: 3632386963952414629, guid: faf8921f309700b4f909541a1fc7690f, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.20367567
       objectReference: {fileID: 0}
     - target: {fileID: 3632386963952414630, guid: faf8921f309700b4f909541a1fc7690f, type: 3}
       propertyPath: m_Name
